@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .border--black {
+    border: 1px solid #000;
+  }
+  .rem {
+    font-size: 10px;
+  }
+
+  .border--gray {
+    border: 1px solid #d1d5db;
+  }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="rem">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-green-300 flex items-center justify-center py-8">
+    <div
+      class="form-container sm:w-4/5 h-screen flex items-center justify-center"
+    >
+      <form id="form" class="w-[50%] h-[auto] rounded-lg py-10 px-12 bg-white">
+        <!-- Contact Title -->
+        <div class="contact-title mb-6">
+          <h1 class="uppercase text-gray-400 font-medium text-3xl">
+            contact us
+          </h1>
+        </div>
+
+        <!-- ******************************** -->
+
+        <!-- User Name Details -->
+
+        <div class="user-name-details flex gap-8 mb-6">
+          <!-- First Name -->
+          <div class="first-name-container flex flex-col basis-[50%]">
+            <label for="f-name" class="capitalize text-[1.5rem] text-gray-500"
+              >first name</label
+            >
+            <input
+              type="text"
+              class="border--gray rounded px-2 py-3 text-gray-500"
+            />
+          </div>
+
+          <!-- Last Name -->
+          <div class="last-name-container flex flex-col basis-[50%]">
+            <label for="l-name" class="capitalize text-[1.5rem] text-gray-500"
+              >last name</label
+            >
+            <input
+              type="text"
+              class="border--gray rounded px-2 py-3 text-gray-500"
+            />
+          </div>
+        </div>
+
+        <!-- ******************************** -->
+        <!-- Email Address -->
+
+        <div class="user-email-details flex flex-col mb-6">
+          <label for="email" class="capitalize text-[1.5rem] text-gray-500"
+            >email address</label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="border--gray rounded px-2 py-4 text-gray-500"
+          />
+        </div>
+
+        <!-- ********************************* -->
+        <!-- Query Type -->
+
+        <div class="query-container flex flex-col gap-1 mb-6">
+          <h2 class="capitalize text-[1.5rem] text-gray-500">query type</h2>
+          <div class="query-details flex items-center gap-4">
+            <!-- General Enquiry -->
+            <div
+              class="general-query-container border--gray basis-[50%] flex items-center gap-4 rounded-lg px-2 py-4"
+            >
+              <label
+                for="g-query"
+                class="order-5 text-[1.5rem] capitalize text-gray-500"
+                >general enquiry</label
+              >
+              <input
+                type="radio"
+                name="query"
+                id="g-query"
+                class="order-1 text-gray-500"
+              />
+            </div>
+
+            <!-- ***************************** -->
+            <!-- Support Request -->
+            <div
+              class="support-container border--gray basis-[50%] flex items-center gap-4 rounded-lg px-2 py-4"
+            >
+              <label
+                for="support"
+                class="order-5 text-[1.5rem] capitalize text-gray-500"
+                >support request</label
+              >
+              <input
+                type="radio"
+                name="query"
+                id="support"
+                class="order-1 text-gray-500"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ******************************************* -->
+        <!-- ******************************************* -->
+
+        <!-- Message Text Area -->
+
+        <div class="query-msg mb-6">
+          <label for="msg" class="capitalize text-[1.5rem] text-gray-500"
+            >Message</label
+          >
+          <textarea
+            name="msg"
+            id="msg"
+            class="border--gray w-[100%] h-64 rounded-lg text-gray-500"
+          ></textarea>
+        </div>
+
+        <!-- ******************************************** -->
+        <!-- ******************************************** -->
+
+        <!-- Checkbox -->
+
+        <div class="checkbox-container flex items-center gap-4 mt-6 mb-6">
+          <input
+            type="checkbox"
+            name="consent"
+            id="consent"
+            class="border--gray"
+          />
+          <label for="consent" class="capitalize text-[1.5rem] text-gray-500"
+            >i consent to being contact by team</label
+          >
+        </div>
+
+        <!-- *********************************************** -->
+        <!-- *********************************************** -->
+
+        <!-- Submit Button -->
+        <input
+          type="submit"
+          value="Submit"
+          class="w-full bg-green-500 py-4 rounded-lg uppercase text-[1.5rem] text-yellow-50 cursor-pointer"
+        />
+      </form>
+    </div>
+  </body>
+</html>
