@@ -554,16 +554,16 @@ video {
   --tw-contain-style:  ;
 }
 
-.border--black {
-  border: 1px solid #000;
-}
-
 .rem {
   font-size: 10px;
 }
 
 .border--gray {
   border: 1px solid #d1d5db;
+}
+
+.sucess {
+  border: 1px solid #4ade80;
 }
 
 .order-1 {
@@ -584,6 +584,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-64 {
@@ -724,6 +728,11 @@ video {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .text-yellow-50 {

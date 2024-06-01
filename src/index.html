@@ -29,9 +29,13 @@
             >
             <input
               type="text"
-              class="border--gray rounded px-2 py-3 text-gray-500"
-              id="f-name"
+              class="border--gray rounded px-2 py-3 text-gray-500 input-element"
+              id="f-name input-el"
+              required
             />
+            <p class="text-red-500 hidden" id="err-msg-1">
+              The field is required
+            </p>
           </div>
 
           <!-- Last Name -->
@@ -41,9 +45,13 @@
             >
             <input
               type="text"
-              class="border--gray rounded px-2 py-3 text-gray-500"
+              class="border--gray rounded px-2 py-3 text-gray-500 input-element"
               id="l-name"
+              required
             />
+            <p class="text-red-500 hidden" id="err-msg-2">
+              The field is required
+            </p>
           </div>
         </div>
 
@@ -58,8 +66,12 @@
             type="email"
             name="email"
             id="email"
-            class="border--gray rounded px-2 py-4 text-gray-500"
+            class="border--gray rounded px-2 py-4 text-gray-500 input-element"
+            required
           />
+          <p class="text-red-500 hidden" id="err-msg-3">
+            The field is required
+          </p>
         </div>
 
         <!-- ********************************* -->
@@ -83,6 +95,7 @@
                 id="g-query"
                 value="general enquiry"
                 class="order-1 text-gray-500"
+                required
               />
             </div>
 
@@ -105,6 +118,9 @@
               />
             </div>
           </div>
+          <p class="text-red-500 hidden" id="err-msg-4">
+            The field is required
+          </p>
         </div>
 
         <!-- ******************************************* -->
@@ -117,10 +133,14 @@
             >Message</label
           >
           <textarea
+            required
             name="msg"
             id="msg"
-            class="border--gray w-[100%] h-64 rounded-lg text-gray-500"
+            class="border--gray w-[100%] h-64 rounded-lg text-gray-500 input-element"
           ></textarea>
+          <p class="text-red-500 hidden" id="err-msg-5">
+            The field is required
+          </p>
         </div>
 
         <!-- ******************************************** -->
@@ -130,15 +150,19 @@
 
         <div class="checkbox-container flex items-center gap-4 mt-6 mb-6">
           <input
+            required
             type="checkbox"
             name="consent"
             id="consent"
-            class="border--gray"
+            class="border--gray input-element"
           />
           <label for="consent" class="capitalize text-[1.5rem] text-gray-500"
             >i consent to being contact by team</label
           >
         </div>
+        <p class="text-red-500 hidden" id="err-msg-6">
+          The consent is required to be checked
+        </p>
 
         <!-- *********************************************** -->
         <!-- *********************************************** -->

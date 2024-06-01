@@ -13,4 +13,12 @@
   .border--gray {
     border: 1px solid #d1d5db;
   }
+
+  .error {
+    outline: 5px solid #ef4444;
+  }
+
+  .sucess {
+    outline: 5px solid #65a30d;
+  }
 }
