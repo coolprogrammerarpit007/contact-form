@@ -34,7 +34,7 @@ const inputEl = document.querySelectorAll(`.input-element`);
 // function for applying on focus
 
 const validation = function (el, i) {
-  el.classList.remove(`hidden`);
+  el.classList.remove(`error`);
   document.getElementById(`err-msg-${i + 1}`).classList.add(`hidden`);
   el.classList.add(`sucess`);
 };
@@ -61,6 +61,11 @@ inputEl.forEach((input, i) => {
 inputEl.forEach((input, i) => {
   // applying the event listener
   input.addEventListener(`mouseleave`, function (e) {
-    error(input, i);
+    const valueInput = input.value;
+    if (valueInput !== ``) {
+      validation(input, i);
+    } else {
+      error(input, i);
+    }
   });
 });
