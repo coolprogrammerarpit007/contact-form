@@ -4,6 +4,10 @@
 // Form Valiation
 // getting acess to the dom elements
 
+// state variable
+let isOption = false;
+let inputValue = false;
+
 const firstName = document.getElementById(`f-name`);
 
 const lastName = document.getElementById(`l-name`);
@@ -47,6 +51,7 @@ const error = function (el, i) {
   document.getElementById(`err-msg-${i + 1}`).classList.remove(`hidden`);
 };
 
+// *********************************
 // Applying event listener on hover
 
 inputEl.forEach((input, i) => {
@@ -64,8 +69,35 @@ inputEl.forEach((input, i) => {
     const valueInput = input.value;
     if (valueInput !== ``) {
       validation(input, i);
+      inputValue = true;
     } else {
       error(input, i);
+      inputValue = false;
     }
   });
+});
+
+// **************************************
+
+// Adding event listener to the radio btns
+
+queryOptions.forEach((query, i) => {
+  query.addEventListener(`change`, function (e) {
+    isOption = true;
+  });
+});
+
+// *********************************
+// *********************************
+
+// Form submittion event
+
+submiBtn.addEventListener(`click`, function (e) {
+  e.preventDefault();
+
+  if (isOption && inputValue) {
+    confirm(`Your form has submitted sucessfully!`);
+  } else {
+    alert(`Fill the necessary details!`);
+  }
 });
