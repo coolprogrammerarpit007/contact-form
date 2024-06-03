@@ -15,10 +15,10 @@
   }
 
   .error {
-    outline: 5px solid #ef4444;
+    outline: 50px solid red;
   }
 
   .sucess {
-    outline: 5px solid #65a30d;
+    outline: 5px solid #166534;
   }
 }

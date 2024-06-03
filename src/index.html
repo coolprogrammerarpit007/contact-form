@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body class="bg-green-300 flex items-center justify-center py-8">
+  <body class="bg-green-600 flex items-center justify-center py-8">
     <div
       class="form-container sm:w-4/5 h-screen flex items-center justify-center"
     >
@@ -29,8 +30,8 @@
             >
             <input
               type="text"
-              class="border--gray rounded px-2 py-3 text-gray-500 input-element"
-              id="f-name input-el"
+              class="border--gray rounded px-2 py-3 text-gray-500 input-element outline-none input-el"
+              id="f-name"
             />
             <p class="text-red-500 hidden" id="err-msg-1">
               The field is required
@@ -44,7 +45,7 @@
             >
             <input
               type="text"
-              class="border--gray rounded px-2 py-3 text-gray-500 input-element"
+              class="border--gray rounded px-2 py-3 text-gray-500 input-element outline-none"
               id="l-name"
             />
             <p class="text-red-500 hidden" id="err-msg-2">
@@ -64,7 +65,7 @@
             type="email"
             name="email"
             id="email"
-            class="border--gray rounded px-2 py-4 text-gray-500 input-element"
+            class="border--gray rounded px-2 py-4 text-gray-500 input-element outline-none"
           />
           <p class="text-red-500 hidden" id="err-msg-3">
             The field is required
@@ -128,7 +129,7 @@
           <textarea
             name="msg"
             id="msg"
-            class="border--gray w-[100%] h-64 rounded-lg text-gray-500 input-element"
+            class="border--gray w-[100%] h-64 rounded-lg text-gray-500 input-element outline-none"
           ></textarea>
           <p class="text-red-500 hidden" id="err-msg-5">
             The field is required
@@ -142,7 +143,6 @@
 
         <div class="checkbox-container flex items-center gap-4 mt-6 mb-6">
           <input
-            required
             type="checkbox"
             name="consent"
             id="consent"
@@ -163,7 +163,7 @@
         <input
           type="submit"
           value="Submit"
-          class="w-full bg-green-500 py-4 rounded-lg uppercase text-[1.5rem] text-yellow-50 cursor-pointer"
+          class="w-full bg-green-500 py-4 rounded-lg uppercase text-[1.5rem] text-yellow-50 cursor-pointer bg-orange-600"
           id="btn"
         />
       </form>
