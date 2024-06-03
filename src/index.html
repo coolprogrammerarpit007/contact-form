@@ -8,9 +8,19 @@
   </head>
   <body class="bg-green-600 flex items-center justify-center py-8">
     <div
-      class="form-container sm:w-4/5 h-screen flex items-center justify-center"
+      class="form-container sm:w-4/5 h-screen flex flex-col items-center justify-center"
     >
-      <form id="form" class="w-full sm: w-[50%] h-[auto] rounded-lg py-10 px-12 bg-white">
+      <div class="sucessful-form-upload bg-grey-900 py-2 px-2 rounded-lg hidden">
+        <div class="sucess-msg flex justify-start gap-2 items-center">
+          <img src="../assets/images/icon-success-check.svg" alt="checkbox">
+          <p class="sucess-msg-text text-white">Message Sent</p>
+        </div>
+
+        <div class="form-sucess-msg text-white">
+          <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+      </div>
+      <form id="form" class="w-full sm:w-[50%] h-[auto] rounded-lg py-10 px-12 bg-white">
         <!-- Contact Title -->
         <div class="contact-title mb-6">
           <h1 class="uppercase text-gray-400 font-medium text-3xl">

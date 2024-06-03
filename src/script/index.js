@@ -3,6 +3,7 @@
 
 let selectedValue;
 const inputEls = document.querySelectorAll(`.input-element`);
+const sucessFormUpload = document.querySelector(`.sucessful-form-upload`);
 
 // Now Adding focus event listener to the input elements
 
@@ -110,14 +111,17 @@ form.addEventListener(`submit`,(e)=>{
     return;
   }
 
-  alert(`Your form has been submitted!`);
+  sucessFormUpload.classList.remove(`hidden`);
+  setTimeout(()=>{
+    sucessFormUpload.classList.add(`hidden`);
+  },"3000")
   inputEls.forEach((el)=>{
     if(el.classList.contains(`sucess`)){
       el.classList.remove(`sucess`);
     }
   })
-
-
+  
+  
   
   form.reset();
 })
