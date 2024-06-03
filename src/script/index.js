@@ -36,7 +36,6 @@ optionValues.forEach((option)=>{
   option.addEventListener(`change`,(e)=>{
     if(option.checked){
       selectedValue = option.value;
-      alert(selectedValue);
     }
   })
 })
@@ -112,6 +111,11 @@ form.addEventListener(`submit`,(e)=>{
     return;
   }
 
+  // checking if radio btns are selected or not!
+  if(!selectedValue){
+    alert(`Select a proper option!`);
+    return;
+  }
 
   // checking if the checkbox got checked or not!
   if(!checkBox.checked){
@@ -120,11 +124,7 @@ form.addEventListener(`submit`,(e)=>{
   }
 
 
-  // checking if radio btns are selected or not!
-  if(!selectedValue){
-    alert(`Select a proper option!`);
-    return;
-  }
+  
 
   sucessFormUpload.classList.remove(`hidden`);
   setTimeout(()=>{
