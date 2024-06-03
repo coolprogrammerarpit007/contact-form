@@ -137,7 +137,7 @@ form.addEventListener(`submit`,(e)=>{
   })
   
   
-  
+  selectedValue = '';
   form.reset();
 })
 
