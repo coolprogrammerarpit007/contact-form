@@ -10,7 +10,7 @@
     <div
       class="form-container sm:w-4/5 h-screen flex items-center justify-center"
     >
-      <form id="form" class="w-[50%] h-[auto] rounded-lg py-10 px-12 bg-white">
+      <form id="form" class="w-full sm: w-[50%] h-[auto] rounded-lg py-10 px-12 bg-white">
         <!-- Contact Title -->
         <div class="contact-title mb-6">
           <h1 class="uppercase text-gray-400 font-medium text-3xl">
@@ -22,7 +22,7 @@
 
         <!-- User Name Details -->
 
-        <div class="user-name-details flex gap-8 mb-6">
+        <div class="user-name-details flex flex-col sm:flex-row gap-8 mb-6">
           <!-- First Name -->
           <div class="first-name-container flex flex-col basis-[50%]">
             <label for="f-name" class="capitalize text-[1.5rem] text-gray-500"
@@ -75,12 +75,12 @@
         <!-- ********************************* -->
         <!-- Query Type -->
 
-        <div class="query-container flex flex-col gap-1 mb-6">
+        <div class="query-container flex flex-col gap-0 sm:gap-1 mb-0 sm:mb-6">
           <h2 class="capitalize text-[1.5rem] text-gray-500">query type</h2>
-          <div class="query-details flex items-center gap-4">
+          <div class="query-details flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <!-- General Enquiry -->
             <div
-              class="general-query-container border--gray basis-[50%] flex items-center gap-4 rounded-lg px-2 py-4"
+              class="general-query-container border--gray basis-[100%] sm:basis-[50%] flex items-start sm:items-center gap-4 sm:gap-4 rounded-lg px-2 py-4"
             >
               <label
                 for="g-query"
@@ -99,7 +99,7 @@
             <!-- ***************************** -->
             <!-- Support Request -->
             <div
-              class="support-container border--gray basis-[50%] flex items-center gap-4 rounded-lg px-2 py-4"
+              class="support-container border--gray basis-[100%]sm:basis-[50%] flex items-center gap-4 sm:gap-4 rounded-lg px-2 py-4"
             >
               <label
                 for="support"
