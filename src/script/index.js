@@ -7,21 +7,18 @@ const inputEls = document.querySelectorAll(`.input-element`);
 // Now Adding focus event listener to the input elements
 
 inputEls.forEach((el)=>{
-  el.addEventListener(`focus`,(e)=>{
-    el.classList.add(`sucess`)
+  el.addEventListener(`click`,(e)=>{
+    if(el.classList.contains(`validate-error`)){
+      el.classList.remove(`validate-error`);
+    }
+    el.classList.add(`sucess`);
   })
 })
 
 
 // Event to on mouse leave
 
-inputEls.forEach((el) =>{
-  el.addEventListener(`mouseleave`,(e)=>{
-    if(el.classList.contains(`sucess`)){
-      el.classList.remove(`sucess`);
-    }
-  })
-})
+
 
 
 // **************************************************
@@ -70,18 +67,23 @@ form.addEventListener(`submit`,(e)=>{
   //  To check if input values are right
 
   if(!firstName.toLowerCase().trim()){
+    console.log(`firstname`);
     alert(`Invalid Input!`)
-    document.getElementById(`f-name`).classList.add(`error`);
+    document.getElementById(`f-name`).classList.remove(`sucess`);
+    document.getElementById(`f-name`).classList.add(`validate-error`);
     return;
   }
   if(!lastName.toLowerCase().trim()){
     alert(`Invalid Input!`)
-    document.getElementById(`f-name`).classList.add(`error`);
+    document.getElementById(`l-name`).classList.remove(`sucess`);
+    document.getElementById(`l-name`).classList.add(`validate-error`);
     return;
   }
 
   if(!message.toLowerCase().trim()){
     alert(`Invalid Input!`);
+    document.getElementById(`msg`).classList.remove(`sucess`);
+    document.getElementById(`msg`).classList.add(`validate-error`);
     return;
   }
 
@@ -89,6 +91,8 @@ form.addEventListener(`submit`,(e)=>{
 
   if(!email.toLowerCase().trim() || !isValidEmail(email) ){
     alert(`Invalid Email Address!`);
+    document.getElementById(`email`).classList.remove(`sucess`);
+    document.getElementById(`email`).classList.add(`validate-error`);
     return;
   }
 
@@ -107,6 +111,14 @@ form.addEventListener(`submit`,(e)=>{
   }
 
   alert(`Your form has been submitted!`);
+  inputEls.forEach((el)=>{
+    if(el.classList.contains(`sucess`)){
+      el.classList.remove(`sucess`);
+    }
+  })
+
+
+  
   form.reset();
 })
 

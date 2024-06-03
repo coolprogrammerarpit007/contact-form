@@ -566,6 +566,10 @@ video {
   border: 1px solid #4ade80;
 }
 
+
+.validate-error {
+  border: 1px solid red;
+}
 .order-1 {
   order: 1;
 }

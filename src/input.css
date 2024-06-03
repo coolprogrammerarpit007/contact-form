@@ -14,11 +14,11 @@
     border: 1px solid #d1d5db;
   }
 
-  .error {
-    outline: 50px solid red;
+  .validate-error {
+    border: 50px solid red;
   }
 
   .sucess {
-    outline: 5px solid #166534;
+    border: 5px solid #166534;
   }
 }
