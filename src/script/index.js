@@ -72,12 +72,22 @@ form.addEventListener(`submit`,(e)=>{
     alert(`Invalid Input!`)
     document.getElementById(`f-name`).classList.remove(`sucess`);
     document.getElementById(`f-name`).classList.add(`validate-error`);
+    document.getElementById(`err-msg-1`).classList.remove(`hidden`);
+
+    setTimeout(()=>{
+      document.getElementById(`err-msg-1`).classList.add(`hidden`);
+    },"2000")
     return;
   }
   if(!lastName.toLowerCase().trim()){
     alert(`Invalid Input!`)
     document.getElementById(`l-name`).classList.remove(`sucess`);
     document.getElementById(`l-name`).classList.add(`validate-error`);
+    document.getElementById(`err-msg-2`).classList.remove(`hidden`);
+
+    setTimeout(()=>{
+      document.getElementById(`err-msg-2`).classList.add(`hidden`);
+    },"2000")
     return;
   }
 
@@ -94,6 +104,11 @@ form.addEventListener(`submit`,(e)=>{
     alert(`Invalid Email Address!`);
     document.getElementById(`email`).classList.remove(`sucess`);
     document.getElementById(`email`).classList.add(`validate-error`);
+    document.getElementById(`err-msg-3`).classList.remove(`hidden`);
+
+    setTimeout(()=>{
+      document.getElementById(`err-msg-3`).classList.add(`hidden`);
+    },"2000")
     return;
   }
 
