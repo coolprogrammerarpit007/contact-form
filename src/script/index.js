@@ -67,8 +67,6 @@ form.addEventListener(`submit`,(e)=>{
   //  To check if input values are right
 
   if(!firstName.toLowerCase().trim()){
-    console.log(`firstname`);
-    alert(`Invalid Input!`)
     document.getElementById(`f-name`).classList.remove(`sucess`);
     document.getElementById(`f-name`).classList.add(`validate-error`);
     document.getElementById(`err-msg-1`).classList.remove(`hidden`);
@@ -79,7 +77,6 @@ form.addEventListener(`submit`,(e)=>{
     return;
   }
   if(!lastName.toLowerCase().trim()){
-    alert(`Invalid Input!`)
     document.getElementById(`l-name`).classList.remove(`sucess`);
     document.getElementById(`l-name`).classList.add(`validate-error`);
     document.getElementById(`err-msg-2`).classList.remove(`hidden`);
@@ -90,17 +87,10 @@ form.addEventListener(`submit`,(e)=>{
     return;
   }
 
-  if(!message.toLowerCase().trim()){
-    alert(`Invalid Input!`);
-    document.getElementById(`msg`).classList.remove(`sucess`);
-    document.getElementById(`msg`).classList.add(`validate-error`);
-    return;
-  }
-
+  
   // checking if email is valid
 
   if(!email.toLowerCase().trim() || !isValidEmail(email) ){
-    alert(`Invalid Email Address!`);
     document.getElementById(`email`).classList.remove(`sucess`);
     document.getElementById(`email`).classList.add(`validate-error`);
     document.getElementById(`err-msg-3`).classList.remove(`hidden`);
@@ -111,6 +101,21 @@ form.addEventListener(`submit`,(e)=>{
     return;
   }
 
+
+  // checking if msg is valid or not
+
+  if(!message.toLowerCase().trim()){
+    document.getElementById(`msg`).classList.remove(`sucess`);
+    document.getElementById(`msg`).classList.add(`validate-error`);
+    document.getElementById(`err-msg-5`).classList.remove(`hidden`);
+
+    setTimeout(()=>{
+      document.getElementById(`err-msg-5`).classList.add(`hidden`);
+    },"2000")
+    return;
+  }
+
+
   // checking if radio btns are selected or not!
   if(!selectedValue){
     alert(`Select a proper option!`);
@@ -119,7 +124,11 @@ form.addEventListener(`submit`,(e)=>{
 
   // checking if the checkbox got checked or not!
   if(!checkBox.checked){
-    alert(`You have to agree to consent!`);
+    document.getElementById(`err-msg-6`).classList.remove(`hidden`);
+
+    setTimeout(()=>{
+      document.getElementById(`err-msg-6`).classList.add(`hidden`);
+    },"2000")
     return;
   }
 
